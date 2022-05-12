@@ -1,0 +1,145 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    color: gray;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-areas: 'head head head head head head '
+    'main main main main main main'
+    'side side side side side side';
+    gap: 2px;
+    border-radius: 5px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.head{grid-area: head;}
+.item1{
+    width: 600px;
+    height: 300px;
+    display: inline-block;
+    margin-top: 50px;
+    /* background-color: aqua; */
+    padding: 20px 70px;
+}
+.item1 h4{
+    display: inline-block;
+}
+.item2{
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    display: inline-block;
+    /* background-color: aqua; */
+    float: right;
+}
+
+.item2 img{
+    max-width: 200px;
+    border-radius: 50%;
+    border: solid 4px gray;
+}
+.side{grid-area: side;
+    height: 500px;
+}
+.main{grid-area: main;
+    height: 500px;
+}
+
+
+.item1 h4{
+    margin-bottom: 20px;
+}
+
+
+/*          side                 */
+    .container-list li{
+        list-style-type: none;
+        padding-bottom: 10px;
+    }
+    .container-list h4{
+        padding: 0 50px 15px;
+    }
+    .container-list ul{
+       margin-left: 65px;
+    }
+/*           container-skills   */
+.container-skills{
+    max-width: 580px;
+    height: 360px;
+    margin: auto;
+    /* background-color: aqua; */
+    box-shadow:  0 19px 38px rgba(0, 0, 0, 0.205), 0 15px 12px rgba(0, 0, 0, 0.137);
+    border-radius: 5px 0;
+}
+.container-skills h3{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.container-skills ul{
+    margin-left: 50px;
+}
+.container-skills li{
+    list-style-type: none;
+    margin-bottom: 50px;
+}
+.container-skills .containerHTML , .containerCSS , .containerJS , .containerGIT{
+    max-width: 480px;
+    height: 5px;
+    border: solid 1px;
+}
+.html{
+    max-width: 80%;
+    height: 4px;
+    background-color: green;
+}
+.css{
+    max-width: 50%;
+    height: 4px;
+    background-color: blue;
+}
+.js{
+    max-width: 37%;
+    height: 4px;
+    background-color: brown;
+}
+.git{
+    max-width: 25%;
+    height: 4px;
+    background-color: red;
+}
+.html , .css , .js , .git{
+    animation: percents 5s forwards;
+}
+@keyframes percents {
+    from{
+        max-width: 0;
+    }
+    tow{
+    max-width: 46%;
+
+    }
+}
+.container-skills span{
+    animation: visible 3s  forwards;
+}
+@keyframes visible {
+    0%{
+        color: transparent;
+    }
+    25%{
+        color: rgba(128, 128, 128, 0.315);
+    }
+    50%{
+        color: rgba(128, 128, 128, 0.493);
+    }
+    100%{
+        color: gray;
+    }
+}
